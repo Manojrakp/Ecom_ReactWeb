@@ -5,6 +5,7 @@ export const usePreLoginHomeStore = create((set) => ({
   response: [],
   loading: false,
   homeAds: [],
+  products: [],
   error: null,
 
   getPreloginHome: async () => {
@@ -15,6 +16,7 @@ export const usePreLoginHomeStore = create((set) => ({
         response: data,
         homeAds: data.adsList || [],
         loading: false,
+        products: data.products || [],
       });
     } catch (err) {
       set({ error: err.message, loading: false });

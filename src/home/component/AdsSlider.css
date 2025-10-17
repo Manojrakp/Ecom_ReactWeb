@@ -1,0 +1,34 @@
+.ads-slider {
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  position: relative;
+}
+
+.ads-slider__image-container {
+  width: 100%;
+}
+.ads-slider__img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ads-slider__arrow-left {
+  position: absolute;
+  background: transparent;
+  left: 0.5rem;
+}
+
+.ads-slider__arrow-right {
+  position: absolute;
+  background: transparent;
+  right: 0.5rem;
+}
+
+.arrow-icon {
+  color: #ffffff;
+  filter: drop-shadow(2px 2px 2px black);
+  transition: transform 0.2s, filter 0.2s;
+}
