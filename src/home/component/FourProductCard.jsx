@@ -6,23 +6,30 @@ function FourProductCard({ title = "Deals you might like", products = [] }) {
     chunkedProducts.push(products.slice(i, i + 4));
   }
 
+  const handleProductClick = (product) => {
+    console.log("handleProductClick-->", JSON.stringify(product));
+  };
+
   return (
     <div className="deals-container">
-      {/* <h1>{title}</h1> */}
-
       {chunkedProducts.map((group, index) => (
-        <div key={index} className="four-productcard">
+        <div key={index} className="four-card">
           {group.map((product) => (
-            <div>
+            <div
+              className="four-card__Products"
+              onClick={() => handleProductClick(product)}
+            >
               <img
                 src={product.thumbnailUrl}
                 alt={product.name}
-                className="product-card-image"
+                className="four-card__image"
               />
-              <div className="product-details">
-                {/* <p className="offer">{product.offer}% off</p>
-                <p className="festival">{product.offersDescription}</p> */}
-                <p className="name">{product.name}</p>
+              <div className="four-card__details">
+                <p className="four-card__offer">{product.offer}% off</p>
+                <p className="four-card__festival">
+                  {product.offersDescription}
+                </p>
+                {/* <p className="name">{product.name}</p> */}
               </div>
             </div>
           ))}

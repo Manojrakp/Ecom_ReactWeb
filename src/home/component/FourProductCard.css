@@ -1,24 +1,24 @@
 .deals-container {
   display: flex;
-  background-color: #e4d8d8;
   border-width: 2rem;
-  border: 2px solid red;
   flex-direction: row;
-
   flex-wrap: wrap;
   gap: 1rem;
+  margin-top: 20%;
+  position: absolute;
 }
 
-.four-productcard {
+.four-card {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   flex-shrink: 1;
-  max-width: 320px;
+  max-width: 360px;
   justify-content: center;
   align-self: center;
   padding: 1rem;
   background-color: #ffffff;
+  border-radius: 0.5rem;
 }
 
 .product-card {
@@ -27,13 +27,13 @@
   text-align: center;
 }
 
-.product-card-image {
-  height: 150px;
-  width: 150px;
+.four-card__image {
+  height: 170px;
+  width: 170px;
   aspect-ratio: 1/1;
 }
 
-.offer {
+.four-card__offer {
   color: #fff;
   background-color: #d32f2f;
   display: inline-block;
@@ -42,12 +42,16 @@
   font-weight: bold;
 }
 
-.festival {
+.four-card__festival {
   color: #d32f2f;
   font-size: 0.9rem;
 }
 
-.name {
+.four-card__name {
   font-size: 0.85rem;
   color: #333;
+}
+
+.four-card__Products {
+  /* border: 1px solid red; */
 }

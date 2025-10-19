@@ -2,7 +2,6 @@
   width: 100%;
   display: flex;
   box-sizing: border-box;
-  align-items: center;
   position: relative;
 }
 
@@ -19,12 +18,14 @@
   position: absolute;
   background: transparent;
   left: 0.5rem;
+  top: 20%;
 }
 
 .ads-slider__arrow-right {
   position: absolute;
   background: transparent;
   right: 0.5rem;
+  top: 20%;
 }
 
 .arrow-icon {
