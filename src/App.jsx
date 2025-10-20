@@ -1,17 +1,15 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import EcomHomePage from "./home/EcomHomePage.jsx";
+import ViewProduct from "./products/ViewProduct.jsx";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <EcomHomePage />
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<EcomHomePage />} />
+        <Route path="/viewproducts" element={<ViewProduct />} />
+      </Routes>
+    </Router>
   );
 }
 
