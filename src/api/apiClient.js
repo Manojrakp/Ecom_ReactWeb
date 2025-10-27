@@ -17,6 +17,12 @@ apiClient.interceptors.request.use(
       data: config.data,
       params: config.params,
     });
+    const token = sessionStorage.getItem("token");
+
+    if (token) {
+      // Set the Authorization header
+      config.headers.Authorization = `Bearer ${token}`;
+    }
     return config;
   },
   (error) => {
