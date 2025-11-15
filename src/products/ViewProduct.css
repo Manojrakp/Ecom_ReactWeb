@@ -25,6 +25,7 @@
 .view-product__prime-img-div {
   width: 100%;
   max-width: 500px;
+  max-height: 700px;
   aspect-ratio: 4 / 5;
   margin: 1rem 1rem;
   display: flex;
